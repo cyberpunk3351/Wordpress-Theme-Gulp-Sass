@@ -12,26 +12,7 @@
 <body <?php body_class(); ?>>
 <div class="container-fluid headColor1 align-self-center">
 	<div class="container h-100">
-
-		<!-- Logo or Title -->
-		<?php 
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title justify-content-center align-self-center"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$breakbeat01_description = get_bloginfo( 'description', 'display' );
-			if ( $breakbeat01_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $breakbeat01_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-		<?php endif; ?>
-		<!-- Logo or Title -->
-
+		<div class="logo"><?php the_custom_logo(); ?></div>
 	</div>
 </div>
 <div id="page" class="site container">

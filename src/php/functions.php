@@ -12,6 +12,7 @@ function breakbeat01_scripts() {
 add_action( 'wp_enqueue_scripts', 'breakbeat01_scripts' );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_theme_support( 'custom-logo' );
 
 require get_template_directory() . '/inc/template-tags.php';
 
