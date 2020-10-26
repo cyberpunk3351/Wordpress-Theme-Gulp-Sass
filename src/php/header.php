@@ -1,37 +1,60 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes();?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="icon" href="favicon.ico">
 
-	<?php wp_head(); ?>
+	<?php wp_head();?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class();?>>
 <div class="container-fluid headColor1 align-self-center">
 	<div class="container h-100">
-		<div class="logo"><?php the_custom_logo(); ?></div>
+		<div class="logo"><?php the_custom_logo();?></div>
+	</div>
+</div>
+<div class="container-fluid headColor2 sticky-top">
+	<div class="container">
+		<!-- ======= Header ======= -->
+		<header id="header">
+			<div class="container d-flex align-items-center">
+
+				<!-- <h1 class="logo mr-auto"><a href="index.html">Drummer</a></h1> -->
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html" class="logo mr-auto"><picture><source srcset="assets/img/logo.webp" type="image/webp"><img src="assets/img/logo.png" alt="" class="img-fluid"></picture></a>-->
+
+				<nav class="nav-menu d-none d-lg-block">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#team">Team</a></li>
+						<li class="drop-down"><a href="">Drop Down</a>
+							<ul>
+								<li><a href="#">Drop Down 1</a></li>
+								<li class="drop-down"><a href="#">Deep Drop Down</a>
+									<ul>
+										<li><a href="#">Deep Drop Down 1</a></li>
+										<li><a href="#">Deep Drop Down 2</a></li>
+										<li><a href="#">Deep Drop Down 3</a></li>
+										<li><a href="#">Deep Drop Down 4</a></li>
+										<li><a href="#">Deep Drop Down 5</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Drop Down 2</a></li>
+								<li><a href="#">Drop Down 3</a></li>
+								<li><a href="#">Drop Down 4</a></li>
+							</ul>
+						</li>
+						<li><a href="#contact">Contact</a></li>
+
+					</ul>
+				</nav><!-- .nav-menu -->
+			</div>
+		</header><!-- End Header -->
 	</div>
 </div>
 <div id="page" class="site container">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'breakbeat01' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'breakbeat01' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
