@@ -11,10 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>">
 	<div class="row pt-3 bottomBorder pb-3">
-		<div class="col-md-3 pr-0 pb-3">
-			<?php breakbeat01_post_thumbnail(); ?>
+		<div class="col-md-2 pr-0 pb-3">
+			<?php the_post_thumbnail('thumbnail'); ?>
 		</div>
-		<div class="col-md-9 align-self-center pb-3">
+		<div class="col-md-10 align-self-center pb-3">
 			<header class="entry-header">
 				<?php
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
