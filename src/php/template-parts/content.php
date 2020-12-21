@@ -37,7 +37,7 @@
 				<?php
 				the_content();
 
-				wp_link_pages(
+				wp_link_pages( //Выводит ссылки навигации по страницам https://wp-kama.ru/function/wp_link_pages
 					array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'breakbeat01' ),
 						'after'  => '</div>',
