@@ -22,8 +22,8 @@
 				if ( 'post' === get_post_type() ) :
 					?>
 					<div class="entry-meta">
-						<span><?php the_time("d M Y"); ?>,</span>
-						<span>by <?php the_author() ?></span>
+						<small><?php the_time("d M Y"); ?>,</small>
+						<small>by <?php the_author() ?></small>
 						<?php
 						// breakbeat01_posted_on();
 						// breakbeat01_posted_on();
