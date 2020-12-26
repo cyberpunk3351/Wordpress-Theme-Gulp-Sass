@@ -1,4 +1,5 @@
-let project_folder = "f:/OSPanel/OpenServer/domains/wordpress01/wp-content/themes/breakbeat03-gulp/";
+// let project_folder = "f:/OSPanel/OpenServer/domains/wordpress01/wp-content/themes/breakbeat03-gulp/";
+let project_folder = "c:/OSPanel/domains/wp01/wp-content/themes/breakbeat03-gulp/";
 let source_folder = "src";
 
 let fs = require('fs');
