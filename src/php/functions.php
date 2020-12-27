@@ -10,9 +10,8 @@ function breakbeat01_scripts() {
 
 }
 
-
-
 add_action( 'wp_enqueue_scripts', 'breakbeat01_scripts' );
+add_action( 'widgets_init', 'main_widget' );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 add_image_size('my-custom-thumb', 260, 150, true);
@@ -24,5 +23,16 @@ require get_template_directory() . '/inc/template-tags.php';
 add_filter( 'excerpt_length', function(){
 	return 20;
 } );
+
+function main_widget(){
+
+	register_sidebar( array(
+		'name' => "Main Sidebar",
+		'id' => "main-sidebar",
+		'description' => "Main Sidebar",
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => "</div>\n",
+	) );
+}
 
 ?>

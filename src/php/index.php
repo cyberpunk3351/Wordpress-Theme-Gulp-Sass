@@ -20,8 +20,7 @@ get_header();
             <div class="col-md-9">
                 <div class="colorBox mb-3"></div>
                 <?php
-                while ( have_posts() ) :
-                    the_post();
+                while ( have_posts() ) : the_post();
 
                     /*
                     * Include the Post-Type-specific template for the content.
@@ -37,11 +36,12 @@ get_header();
 
             </div>
             <div class="col-md-3">
-                <div class="colorBox2"></div>
+                <div class="colorBox2 mb-3"></div>
+                <?php get_sidebar();?>
             </div>
 
         </div>
     </main>
-    <?php
-    get_footer();
+</div><!-- #page -->
+<?php get_footer(); ?>
 

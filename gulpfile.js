@@ -47,7 +47,8 @@ let {src, dest} = require('gulp'),
 function browserSync(params) {
     browsersync.init(
         {
-            proxy: "http://wordpress01/"
+            // proxy: "http://wordpress01/"
+            proxy: "http://wp01/"
         })
 }
 
