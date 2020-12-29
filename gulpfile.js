@@ -108,17 +108,35 @@ function css(params) {
         .pipe(browsersync.stream())
 }
 
+function js() {
+    return src(path.src.js)
+        .pipe(fileinclude())
+        .pipe(dest(path.build.js))
+        .pipe(
+            uglify()
+        )
+        .pipe(
+            rename({
+                extname: ".min.js"
+            })
+        )
+        .pipe(dest(path.build.js))
+        .pipe(browsersync.stream())
+}
+
 function watchFiles(params) {
     gulp.watch([path.watch.php], php)
     gulp.watch([path.watch.css], css)
+    gulp.watch([path.watch.js], js)
 }
-let build = gulp.series(gulp.parallel(maincss, css, php));
+let build = gulp.series(gulp.parallel(js, maincss, css, php));
 let maincsss = gulp.series(gulp.parallel(maincss, mainimg));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.css = css;
 exports.maincss = maincsss;
 exports.php = php;
+exports.js = js;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

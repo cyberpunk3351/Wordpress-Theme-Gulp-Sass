@@ -10,22 +10,19 @@
  */
 
 ?>
-	<div class="container-fluid footerColorOne">
-		<footer id="colophon" class="site-footer">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'breakbeat01' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'breakbeat01' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'breakbeat01' ), 'breakbeat01', '<a href="http://underscores.me/">Underscores.me</a>' );
-					?>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
+	<div class="footerColorOne">
+		<div class="container">
+			<footer class="site-footer">
+				<div class="site-info">
+					
+				</div><!-- .site-info -->				
+			</footer><!-- .site-footer -->
+		</div>
+	</div><!-- .footerColorOne -->
+	<div class="footeBottom">
+		<div class="container">
+			<p class=" footerCopyText">2020 Planet of Breaks</p>
+		</div>
 	</div>
 
 <?php wp_footer(); ?>

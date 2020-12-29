@@ -9,9 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>">
+<article class="row">
 	<div class="row pt-3 bottomBorder pb-3">
-		<div class="col-md-3 pr-0 pb-3">
+		<div class="col-md-3 pb-3">
             <?php breakbeat01_post_thumbnail(); ?>
 		</div>
 		<div class="col-md-9 align-self-center pb-3">
