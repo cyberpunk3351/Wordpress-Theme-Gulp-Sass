@@ -12,6 +12,7 @@
 <article>
     <div class="row pt-3">
     <div class="col-md-9">
+        <div class="pb-3"><?php get_breadcrumb(); ?></div>
         <?php echo the_post_thumbnail('my-custom-thumb-post', array('class' => 'pb-3')); ?>
         <?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
         <p><small><?php the_time("d M Y"); ?> by <?php the_author() ?></small></p>
