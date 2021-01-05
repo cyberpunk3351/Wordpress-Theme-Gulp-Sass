@@ -11,9 +11,18 @@
 
 <body <?php body_class();?>>
 <div class="container-fluid headColor1 align-self-center">
-	<div class="container h-100">
-		<div class="logo"><?php the_custom_logo();?></div>
+	<div class="container">
+		<div class="row justify-content-between">
+			<div><?php the_custom_logo();?></div>
+			<div class="align-self-center">
+				<?php get_search_form(); ?>
+			</div>
+		</div>
+		
+		
+		
 	</div>
+
 </div>
 <div class="container-fluid headColor2 sticky-top">
 	<div class="container">

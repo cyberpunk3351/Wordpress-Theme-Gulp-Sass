@@ -33,8 +33,10 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+	</main>
+</div><!-- #main -->
+
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

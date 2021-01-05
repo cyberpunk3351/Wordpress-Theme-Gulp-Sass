@@ -21,7 +21,8 @@ add_action( 'widgets_init', 'main_widget' );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 add_image_size('my-custom-thumb', 260, 150, true);
-add_theme_support( 'custom-logo' );
+
+add_theme_support( 'custom-logo', array('width' => 200));
 add_theme_support( 'custom-background' );
 
 require get_template_directory() . '/inc/template-tags.php';
@@ -29,6 +30,7 @@ require get_template_directory() . '/inc/template-tags.php';
 add_filter( 'excerpt_length', function(){
 	return 20;
 } );
+add_image_size('my-custom-thumb-post', 9999, 350, true);
 
 function main_widget(){
 
